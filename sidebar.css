@@ -1,0 +1,48 @@
+.aside-container {
+    margin: 0;
+    width:260px;
+    display: flex;
+    font-size: 14px;
+    height: 100vh;
+    padding-left: 0;
+    background: #FFFF;
+
+    border-radius: 0  0 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+}
+.menu-items {
+    display: flex;
+    padding-left: 0;
+    padding-bottom: 0;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 60px;
+
+}
+
+.item-button{
+    font-size: 15px;
+    font-family: Times, Times New Roman, serif;
+    transition: font-weight 0.3s ease;
+
+}
+.item-button:hover {
+    font-weight: bold;
+}
+.menu-items:first-child {
+    margin-top: 50px; /* Перша item зліва */
+
+}
+.menu-item, li{
+    list-style: none;
+    font-weight:400 ;
+    cursor: pointer;
+
+}
+.acontainer {
+    display: flex;
+    font-size: 14px;
+    margin: 0;
+}

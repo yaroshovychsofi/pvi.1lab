@@ -1,0 +1,119 @@
+svg {
+    height: 40px;
+
+
+}
+.container {
+    display: flex;
+    font-size: 14px;
+    margin: 0;
+    width: 100%;
+    padding-right: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 0.5rem 1.5rem;
+    background: #FFFF;
+    border-radius: 0 0 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    margin: 0 0 0 0 ;
+}
+body {
+    background: plum;
+    padding: 0;
+    margin: 0;
+    width: min-content;
+    padding-right: 0;
+
+}
+.nav-items {
+    display: flex;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    height: 50px;
+}
+.navWebName{
+    margin: 5px;
+}
+.nav-item:first-child {
+    margin-right: auto; /* Перша item зліва */
+
+}
+.nav-item:nth-last-child(2) {
+    margin-right: 0; /* Забираємо відстань між передостаннім та останнім item */
+}
+
+.nav-item, .drop-down li{
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight:600 ;
+    cursor: pointer;
+    
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+    display: block;
+
+
+}
+.navUserName{
+    font-family: Times, Times New Roman, serif;
+    margin-left: 5px;
+    align-self: center;
+    padding: 0;
+}
+.drop-down{
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background: antiquewhite;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;
+}
+.nav-item:hover{
+    background-color: plum;
+    color: #FFFF;
+    border-radius: 0.5rem;
+
+}
+.notifications:hover .drop-down {
+    display: block ;
+}
+.user:hover .drop-down {
+    display: block ;
+
+
+}
+.notifications a{
+    display: flex;
+    justify-content: flex-end;
+}
+.user a{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown-icon{
+    font-size: 20px;
+    position: relative;
+    right: -5px;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out all;
+
+}
+.notifications:hover .dropdown-icon {
+    transform:rotate(180deg) ;
+
+}
+.user:hover .dropdown-icon {
+    transform:rotate(180deg) ;
+}
+

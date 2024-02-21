@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.table{
+    width: 100%;
+
+}
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px;
+    border-radius: 1rem;
+    background-color: #FFFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+}
+.table-header p{
+    color: black;
+
+}
+button{
+    outline:none;
+    border:none;
+    border-radius: 1rem;
+    cursor:pointer;
+    padding: 10px;
+
+
+
+}
+
+.student-title{
+    font-size: 25px;
+
+}
+
+button p{
+    align-items: center;
+}
+
+td button:nth-child(1)
+{
+    background-color: plum;
+}
+td button:nth-child(2)
+{
+    background-color: plum;
+}
+.add-new{
+    padding:10px 20px ;
+    color: #ffff;
+    background-color: plum;
+}
+input{
+    padding: 10px 20px;
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid plum;
+    border-radius: 1rem;
+    color: plum;
+
+
+}
+::placeholder{
+    color: plum;
+}
+.table-selection
+{
+    height: 650px;
+    overflow: auto;
+
+}
+.table-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px;
+    border-right: 1rem;
+
+}
+table{
+    border-radius: 1rem;
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: plum;
+    color: black;
+    font-size: 15px;
+}
+
+th, td{
+    border-bottom: 1px solid rebeccapurple;
+    padding: 10px 10px;
+    word-break: break-all;
+    text-align: center;
+}
