@@ -4,6 +4,7 @@ svg {
 }.helper{
     background: #FFFF;
     border-radius: 0 0 1rem 0;
+     z-index: 10;
  }
 
 .container {
