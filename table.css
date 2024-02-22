@@ -7,6 +7,9 @@
 
 .table{
     width: 100%;
+    position: relative; /* або absolute, fixed, або sticky */
+    z-index: 10; /* Чим вище значення, тим вище елемент на "штабелі" */
+
 
 }
 .table-header{
@@ -33,7 +36,9 @@ button{
 
 
 }
+.add-new-div{
 
+}
 .student-title{
     font-size: 25px;
 
