@@ -38,8 +38,10 @@ button{
 
 }
 
-button p{
-    align-items: center;
+
+.add-new {
+    margin-right: 0; /* Забираємо відстань між передостаннім та останнім item */
+    justify-content: flex-end;
 }
 
 td button:nth-child(1)
@@ -77,17 +79,17 @@ input{
 .table-container{
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin: 20px;
     border-right: 1rem;
+    width: 100%;
 
 }
 table{
     border-radius: 1rem;
-    width: 100%;
     table-layout: fixed;
-    min-width: 1000px;
     border-collapse: collapse;
+    margin-right: 5px;
+    width: 100%;
 }
 
 thead th{
