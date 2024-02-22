@@ -28,7 +28,6 @@
     transition: font-weight 0.3s ease;
 
 }
-
 .item-button:hover {
     font-weight: bold;
 }
