@@ -1,11 +1,21 @@
-svg {
-    height: 40px;
+img {
+    height: 30px;
 
-}.helper{
+}
+.helper{
     background: #FFFF;
     border-radius: 0 0 1rem 0;
-     z-index: 10;
+     z-index: 8;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
  }
+
+
+h1, h2, h3, h4 {
+    /* Adjust heading sizes appropriately */
+    font-size: 0.75rem; /* Example for h1 */
+}
 
 .container {
     display: flex;
@@ -13,8 +23,8 @@ svg {
     margin: 0;
     width: 100%;
     padding-right: 1px;
-    position: relative; /* або absolute, fixed, або sticky */
-    z-index: 10; /* Чим вище значення, тим вище елемент на "штабелі" */
+    position: relative;
+    z-index: 8;
 }
 
 .navbar {

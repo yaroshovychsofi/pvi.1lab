@@ -1,24 +1,25 @@
 .aside-container {
     margin: 0;
-    width:260px;
+    width:25%;
     display: flex;
     font-size: 14px;
-    height: 100vh;
     padding-left: 0;
     background: #FFFF;
     border-radius: 0  0 1rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-
-
+    flex-direction: column;
+    height: 100%;
 }
 .menu-items {
     display: flex;
     padding-left: 0;
     padding-bottom: 0;
-    height: 40px;
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-right: 60px;
+    height: 100%;
+    margin-left: 5%;
+    margin-top: 10%;
+    margin-right: 5%;
+    flex-direction: column;
+    width: min-content;
 
 }
 
@@ -32,7 +33,7 @@
     font-weight: bold;
 }
 .menu-items:first-child {
-    margin-top: 50px; /* Перша item зліва */
+    margin-top: 10%; /* Перша item зліва */
 
 }
 .menu-item, li{
@@ -40,9 +41,28 @@
     font-weight:400 ;
     cursor: pointer;
 
+
 }
 .acontainer {
     display: flex;
     flex-grow: 1;
+    height: calc(100% - 60px);
 
+}
+.menu-item{
+    margin: 8% 8% 3% 3%;
+}
+.sideMenu{
+    height: 100%;
+
+}
+
+
+.marine {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 2rem 1rem;
 }

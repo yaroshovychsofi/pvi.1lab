@@ -1,114 +1,102 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-.table{
+.table {
     width: 100%;
-    position: relative; /* або absolute, fixed, або sticky */
-    z-index: 9; /* Чим вище значення, тим вище елемент на "штабелі" */
-
-
+    position: relative;
+    z-index: 6;
 }
-.table-header{
+
+.table-header {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     padding: 20px;
     border-radius: 1rem;
     background-color: #FFFF;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-
 }
-.table-header p{
+
+.table-header p {
     color: black;
-
 }
-button{
-    outline:none;
-    border:none;
+
+button {
+    outline: none;
+    border: none;
     border-radius: 1rem;
-    cursor:pointer;
+    cursor: pointer;
     padding: 10px;
-
-
-
-}
-.add-new-div{
-
-}
-.student-title{
-    font-size: 25px;
-
 }
 
+.add-new-div {
+    /* Якщо тут є стилі, вони повинні бути вказані */
+}
 
-.add-new {
-    margin-right: 0; /* Забираємо відстань між передостаннім та останнім item */
+.student-title {
+    font-size: 20px;
+}
+
+.dialogue1 {
+    margin-right: 0;
     justify-content: flex-end;
-}
-
-td button:nth-child(1)
-{
-    background-color: plum;
-}
-td button:nth-child(2)
-{
-    background-color: plum;
-}
-.add-new{
-    padding:10px 20px ;
+    padding: 10px 20px;
     color: #ffff;
     background-color: plum;
 }
-input{
+
+td button:nth-child(1), td button:nth-child(2) {
+    background-color: plum;
+}
+
+input {
     padding: 10px 20px;
     margin: 0 10px;
     outline: none;
     border: 1px solid plum;
     border-radius: 1rem;
     color: plum;
-
-
 }
-::placeholder{
+
+::placeholder {
     color: plum;
 }
-.table-selection
-{
-    height: 650px;
-    overflow: auto;
 
+.table-selection {
+    max-height: 650px;
+    overflow: auto;
 }
-.table-container{
+
+.table-container {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    border-right: 1rem;
-    width: 100%;
-
+    margin: 5%;
+    width: 60%;
 }
-table{
+
+table {
     border-radius: 1rem;
-    table-layout: fixed;
+    table-layout: auto;
     border-collapse: collapse;
     margin-right: 5px;
     width: 100%;
 }
 
-thead th{
+thead th {
     position: sticky;
     top: 0;
     background-color: plum;
     color: black;
     font-size: 15px;
+    min-width: 120px;
 }
 
-th, td{
+th, td {
+    white-space: nowrap;
     border-bottom: 1px solid rebeccapurple;
-    padding: 10px 10px;
-    word-break: break-all;
+    padding: 10px;
     text-align: center;
 }
