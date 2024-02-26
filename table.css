@@ -22,6 +22,7 @@
 
 .table-header p {
     color: black;
+
 }
 
 button {
@@ -30,10 +31,20 @@ button {
     border-radius: 1rem;
     cursor: pointer;
     padding: 10px;
+
 }
 
 .add-new-div {
-    /* Якщо тут є стилі, вони повинні бути вказані */
+    background-color: plum;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-content: center;
+
+}
+.add-new-div p{
+    font-size: px;
+    align-self: center;
+    margin: 0 5px 5px 5px;
 }
 
 .student-title {
@@ -47,6 +58,7 @@ button {
     color: #ffff;
     background-color: plum;
 }
+
 
 td button:nth-child(1), td button:nth-child(2) {
     background-color: plum;
