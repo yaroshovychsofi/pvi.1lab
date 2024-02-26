@@ -65,3 +65,12 @@ document.addEventListener('click', function(e) {
         if (row) row.parentNode.removeChild(row);
     }
 });
+
+document.getElementById('selections').addEventListener('change', function(e) {
+    var isChecked = e.target.checked; // Перевірка стану чекбокса (вибрано/не вибрано)
+    var checkboxes = document.querySelectorAll('table input[type="checkbox"]'); // Знаходження всіх чекбоксів у таблиці
+
+    checkboxes.forEach(function(checkbox) {
+        checkbox.checked = isChecked; // Встановлення стану кожного чекбокса відповідно до основного
+    });
+});

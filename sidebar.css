@@ -2,7 +2,7 @@
     margin: 0;
     width:25%;
     display: flex;
-    font-size: 14px;
+    font-size: 100%;
     padding-left: 0;
     background: #FFFF;
     border-radius: 0  0 1rem 0;
@@ -24,9 +24,8 @@
 }
 
 .item-button{
-    font-size: 15px;
+    font-size: 100%;
     font-family: Times, Times New Roman, serif;
-    transition: font-weight 0.3s ease;
 
 }
 .item-button:hover {
@@ -36,7 +35,8 @@
     margin-top: 10%; /* Перша item зліва */
 
 }
-.menu-item, li{
+
+.menu-item,li{
     list-style: none;
     font-weight:400 ;
     cursor: pointer;
