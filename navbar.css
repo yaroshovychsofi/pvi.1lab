@@ -108,6 +108,14 @@ a{
 
 
 }
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(-15deg); }
+}
+
+
 .notifications a{
     display: flex;
     justify-content: flex-end;
@@ -133,4 +141,8 @@ a{
     transform:rotate(180deg) ;
 }
 
+
+#notification-icon:hover {
+    animation: swing 0.5s ease-in-out infinite;
+}
 
