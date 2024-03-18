@@ -1,0 +1,87 @@
+
+body {
+    position: relative; /* Для позиціонування псевдоелемента */
+    height: 100vh; /* Висота body для заповнення всього вікна перегляду */
+    margin: 0; /* Видалення маржинів */
+    background: transparent;
+    overflow: hidden; /* Щоб псевдоелемент не виходив за межі body */
+}
+
+body::before {
+    content: ''; /* Псевдоелементи вимагають властивості content */
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0; /* Псевдоелемент заповнює весь body */
+    background: url('https://i.pinimg.com/originals/1d/3d/bf/1d3dbf048330590da90564fc6404451a.gif') center/cover no-repeat;
+    z-index: -1; /* Псевдоелемент під іншим змістом */
+    filter: blur(5px); /* Розмитість фонового зображення */
+    background-blend-mode: multiply; /* Якщо ви хочете застосувати blend mode */
+}
+body::after {
+    content: '';
+    position: fixed; /* Фіксоване позиціонування для затемненого шару */
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0, 0, 0, 0.7); /* Затемнений шар з прозорістю */
+    z-index: -1; /* Вище заблюреного фону, але під основним змістом */
+}
+
+
+.cover-container {
+    max-width: 42em;
+}
+h3, h1, h2,h4,h5,h6,p{
+    color: white;
+}
+main.px-6 {
+    padding-bottom: 10rem;
+}
+
+/* Мастхед (шапка) і навігація */
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: #fff;
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: #fff;
+}
+
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Текст заголовка */
+.cover-container h1 {
+    font-size: 3.5rem;
+}
+
+.cover-container p {
+    font-size: 1.2rem;
+}
+
+/* Кнопка */
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
+    color: #333;
+    text-shadow: none; /* Вимикаємо текстову тінь для кнопки */
+
+}
+
+
+
+@media (min-width: 40em) {
+    /* Більше простору на більших екранах */
+    body {
+        padding-top: 3rem;
+    }
+    .cover-container {
+        max-width: 80%;
+    }
+}

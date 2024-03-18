@@ -35,10 +35,11 @@ button {
 }
 
 .add-new-div {
-    background-color: plum;
+    background-color: #ffb0d7;
     border-radius: 1rem;
     flex-direction: column;
     align-content: center;
+    text-align: center;
 
 }
 .add-new-div p{
@@ -56,12 +57,12 @@ button {
     justify-content: flex-end;
     padding: 10px 20px;
     color: #ffff;
-    background-color: plum;
+    background-color: #ffb0d7;
 }
 
 
 td button:nth-child(1), td button:nth-child(2) {
-    background-color: plum;
+    background-color: #ffb0d7;
 }
 
 input {
@@ -70,11 +71,11 @@ input {
     outline: none;
     border: 1px solid plum;
     border-radius: 1rem;
-    color: plum;
+    color: #ffb0d7;
 }
 
 ::placeholder {
-    color: plum;
+    color: #ffb0d7;
 }
 
 .table-selection {
@@ -97,10 +98,11 @@ table {
     width: 100%;
 }
 
+
 thead th {
     position: sticky;
     top: 0;
-    background-color: plum;
+    background-color: transparent;
     color: black;
     font-size: 15px;
     min-width: 120px;
@@ -108,7 +110,7 @@ thead th {
 
 th, td {
     white-space: nowrap;
-    border-bottom: 1px solid rebeccapurple;
+    border-bottom: 2px solid white;
     padding: 10px;
     text-align: center;
 }

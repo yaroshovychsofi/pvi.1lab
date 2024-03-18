@@ -75,6 +75,7 @@ input[type="radio"] {
 #save-button{
     background-color: plum;
     margin: 0 40% 0 40%;
+    display: flex;
 }
 
 
