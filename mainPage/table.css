@@ -25,6 +25,26 @@
 
 }
 
+.table-selection {
+    max-height: 650px;
+    overflow: auto;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 60%;
+}
+
+table {
+    border-radius: 1rem;
+    table-layout: auto;
+    border-collapse: collapse;
+    margin-right: 5px;
+    width: 100%;
+}
+
 button {
     outline: none;
     border: none;
@@ -78,25 +98,6 @@ input {
     color: #ffb0d7;
 }
 
-.table-selection {
-    max-height: 650px;
-    overflow: auto;
-}
-
-.table-container {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-    width: 60%;
-}
-
-table {
-    border-radius: 1rem;
-    table-layout: auto;
-    border-collapse: collapse;
-    margin-right: 5px;
-    width: 100%;
-}
 
 
 thead th {

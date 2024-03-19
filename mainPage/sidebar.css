@@ -72,25 +72,26 @@
 
 body {
     position: relative; /* Для позиціонування псевдоелемента */
-    height: 100vh; /* Висота body для заповнення всього вікна перегляду */
+    height: 100%; /* Висота body для заповнення всього вікна перегляду */
     margin: 0; /* Видалення маржинів */
     background: transparent;
     overflow: hidden; /* Щоб псевдоелемент не виходив за межі body */
 }
 
-body::before {
+body::before, body::after {
     content: ''; /* Псевдоелементи вимагають властивості content */
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0; /* Псевдоелемент заповнює весь body */
+    position: absolute; /* ::after змінено на absolute для узгодження з ::before */
+    top: 0; right: 0; bottom: 0; left: 0; /* Псевдоелементи заповнюють весь body */
+    z-index: -1; /* Псевдоелементи під іншим змістом */
+}
+
+body::before {
     background: url('https://i.pinimg.com/originals/39/ed/7f/39ed7f48269fc4de84a43825868d06ce.gif') center/cover no-repeat;
-    z-index: -1; /* Псевдоелемент під іншим змістом */
     filter: blur(5px); /* Розмитість фонового зображення */
     background-blend-mode: multiply; /* Якщо ви хочете застосувати blend mode */
 }
+
 body::after {
-    content: '';
+    background: rgba(0, 0, 0, 0.5); /* Виправлена помилка в значенні rgba */
     position: fixed; /* Фіксоване позиціонування для затемненого шару */
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: rgba(0, 0, 0.5, 0); /* Затемнений шар з прозорістю */
-    z-index: -1; /* Вище заблюреного фону, але під основним змістом */
 }
