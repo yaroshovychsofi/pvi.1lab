@@ -106,7 +106,7 @@ body::after {
     flex-direction: column;
     margin: 2%;
     width: 100%;
-    overflow-x: auto; /* Дозволяє горизонтальний скролінг для великих таблиць */
+    overflow-x: hidden; /* Дозволяє горизонтальний скролінг для великих таблиць */
 }
 
 .main-container{
@@ -137,4 +137,18 @@ a, a:link, a:visited, a:hover, a:active {
 .active{
     box-shadow: 0 5px 7px rgba(0,0,0,0.4);
 
+}
+.tab-container{
+    overflow-x: auto;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+
+}
+
+.shake {
+    animation: shake 0.15s ease-in-out;
 }
