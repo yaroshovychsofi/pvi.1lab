@@ -1,5 +1,5 @@
-let currentlyEditingIndex = null; // Глобальна змінна для зберігання індексу редагованого рядка
-let idNumber = 0; // Лічильник для ID
+let currentlyEditingIndex = null;
+let idNumber = 0;
 
 function initializeModal() {
     const myModalAdd = new bootstrap.Modal(document.getElementById('myModalAdd'), { keyboard: false });
@@ -50,24 +50,17 @@ function addNewRow() {
             birthday: birthdayValue
         };
 
-        // Формування URL з параметрами
         const params = new URLSearchParams(studentInfo).toString();
-        const url = "url-псевдо-сервера?" + params; // Замініть "url-псевдо-сервера" на ваш реальний URL
+        const url = "url-сервера😩" + params;
 
-        // Відправка даних
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.send();
 
-        console.log('Request sent:', url); // Для перевірки, можна побачити в консолі
+        console.log('Request sent:', url);
 
-        // Продовжуємо додавати новий рядок у таблицю
         const tableBody = document.querySelector('.table tbody');
         let newRow = currentlyEditingIndex !== null ? tableBody.rows[currentlyEditingIndex] : tableBody.insertRow();
-
-        if (currentlyEditingIndex === null) {
-            idNumber++; // Інкрементація лічильника ID для нових рядків
-        }
 
         fillRowWithData(newRow, studentInfo);
 
