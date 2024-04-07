@@ -50,14 +50,13 @@ function addNewRow() {
             birthday: birthdayValue
         };
 
+
         const params = new URLSearchParams(studentInfo).toString();
         const url = "url-сервера😩" + params;
-
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.send();
-
-        console.log('Request sent:', url);
+        console.log(url);
 
         const tableBody = document.querySelector('.table tbody');
         let newRow = currentlyEditingIndex !== null ? tableBody.rows[currentlyEditingIndex] : tableBody.insertRow();
@@ -119,16 +118,29 @@ function clearFormFields() {
 function validateForm() {
     const fields = document.querySelectorAll('#myModalAdd .modal-body .form-control');
     let isValid = true;
+    const nameRegex = /^[A-Za-zА-Яа-яЄє'’-]+(?:\s[A-Za-zА-Яа-яЄє'’-]+)*$/;
+
     fields.forEach(field => {
         if (!field.value) {
             field.classList.add('is-invalid');
             isValid = false;
         } else {
-            field.classList.remove('is-invalid');
+            if (field.id === 'name' || field.id === 'lastname') {
+                if (!nameRegex.test(field.value)) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            } else {
+                field.classList.remove('is-invalid');
+            }
         }
     });
+
     return isValid;
 }
+
 
 function clearFormValidation() {
     const fields = document.querySelectorAll('#myModalAdd .modal-body .form-control');
@@ -162,19 +174,16 @@ function editButtonHandler() {
     // Отримання ID з прихованого поля в рядку
     const id = row.querySelector('input[type="hidden"][name="idNumber"]').value;
 
-    // Отримання інших даних з рядка
     const group = row.cells[2].innerText;
-    const fullName = row.cells[3].innerText.split(' '); // Припускаємо, що ім'я та прізвище в одній клітинці
+    const fullName = row.cells[3].innerText.split(' ');
     const name = fullName[0];
     const lastName = fullName.slice(1).join(' ');
     const gender = row.cells[4].innerText;
     const birthday = row.cells[5].innerText;
-
-    // Заповнення форми даними для редагування
     document.getElementById('group').value = group;
     document.getElementById('name').value = name;
     document.getElementById('lastname').value = lastName;
-    // Обираємо стать
+
     selectGender(gender);
     document.getElementById('birthday').value = birthday;
 
@@ -220,10 +229,10 @@ document.addEventListener('DOMContentLoaded', function() {
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            // Реєстрація успішна
+
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
-            // Реєстрація провалилася
+
             console.log('ServiceWorker registration failed: ', err);
         });
     });
